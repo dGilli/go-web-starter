@@ -1,0 +1,20 @@
+package layout
+
+templ Base() {
+    <!DOCTYPE html>
+    <html>
+        <head>
+            <title>Go Starter</title>
+            <link rel="icon" type="image/x-icon" href="/img/favicon.ico" />
+            <link href="/assets/css/styles.css" rel="stylesheet" />
+            <link href="/assets/fontello/css/fontello-codes.css" rel="stylesheet" />
+            <script src="https://unpkg.com/htmx.org"></script>
+            <script src="https://unpkg.com/htmx.org/dist/ext/json-enc.js"></script>
+            <script src="https://unpkg.com/alpinejs" defer></script>
+        </head>
+        <body>
+             <p>Hello from the layout</p>
+            { children... }
+        </body>
+    </html>
+}

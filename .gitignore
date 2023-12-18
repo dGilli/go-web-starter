@@ -1,0 +1,4 @@
+.DS_Store
+tmp/
+view/*/*_templ.go
+go-web-starter

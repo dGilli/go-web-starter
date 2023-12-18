@@ -1,0 +1,29 @@
+package user
+
+import (
+    "go-web-starter/view/layout"
+    "go-web-starter/view/components"
+    "go-web-starter/model"
+)
+
+func getUser(c context.Context) string {
+    user, ok := c.Value("user").(string)
+    if !ok {
+        return ""
+    }
+    return user
+}
+
+templ ShowDashboard(user model.User) {
+    @layout.Base() {
+        <div class="prose mt-10">
+            <h1>Hello {user.Email} from the dashboard page <i class="icon-emo-happy"></i></h1>
+            <div>User from context: {getUser(ctx)}</div>
+            @components.Input(components.InputProps{
+                Type: "email",
+                Name: "email",
+            })
+        </div>
+    }
+}
+
