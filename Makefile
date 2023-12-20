@@ -10,3 +10,7 @@ watch-tailwind:
 	@tailwindcss -i assets/css/styles.css -o tmp/css/styles.css --watch
 watch-main:
 	@air --build.cmd "go build -o tmp/main ." --build.bin "./tmp/main"
+
+clean:
+	@rm -rf tmp
+	cd assets/fontello && $(MAKE) clean
