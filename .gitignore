@@ -2,3 +2,4 @@
 tmp/
 view/*/*_templ.go
 go-web-starter
+assets/fontello/.fontello
